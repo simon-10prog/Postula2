@@ -25,19 +25,19 @@ La solución está diseñada bajo un enfoque **cloud-agnostic**, escalables y de
 
 | Componente | Tipo de Componente | Descripción | Justificación | ¿Es Bloque de Construcción? | Tipo de Bloque |
 |-----------|-------------------|-------------|--------------|-----------------------------|----------------|
-| **CDN** | Componente Adoptado | Entrega contenido estático del Frontend con baja latencia. | Aumenta el rendimiento y disponibilidad. | Sí | Genérico |
-| **Blob Storage** | Componente Adoptado | Almacena imágenes y archivos asociados al catálogo y pedidos. | Evita sobrecargar el backend y facilita escalabilidad. | Sí | Genérico |
-| **WAF** | Componente Adoptado | Filtra y bloquea tráfico malicioso (SQLi, XSS, CSRF). | Protege la infraestructura y datos. | Sí | Genérico |
-| **Identity Management** | Componente Adoptado | Administración centralizada de autenticación y roles. | Garantiza seguridad en el acceso. | Sí | Genérico |
+| **CDN** | Componente Adoptado | Entrega contenido estático del Frontend con baja latencia. | Optimiza el rendimiento y disponibilidad. | Sí | Genérico |
+| **Blob Storage** | Componente Adoptado | Almacena imágenes y archivos asociados al catálogo y pedidos. | Evita sobrecargar en el backend y facilita escalabilidad. | Sí | Genérico |
+| **WAF** | Componente Adoptado | Filtra el trafico y bloquea tráfico malisioso como(SQLi, XSS, CSRF). | Protege los datos y la infraestructura de la aplicacion. | Sí | Genérico |
+| **Identity Management** | Componente Adoptado | Gestor de autenticación y roles. | Asegura y valida el acceso. | Sí | Genérico |
 | **API Gateway** | Componente Adoptado | Punto de acceso unificado al backend. | Facilita enrutamiento y políticas de seguridad. | Sí | Genérico |
 | **Traceability and Monitoring Platform** | Componente Adoptado | Observabilidad y detección temprana de fallos. | Mantiene la estabilidad del servicio. | Sí | Genérico |
-| **Database** | Componente Adoptado | Persistencia de datos críticos del negocio. | Garantiza consistencia y disponibilidad. | Sí | Genérico |
-| **Parameters Catalog** | Desarrollo Propio | Configuración dinámica del sistema. | Permite ajustes sin redeploy. | Sí | Soporte |
-| **Messages Catalog** | Desarrollo Propio | Gestión centralizada de mensajes del sistema. | Mejora mantenibilidad y soporte multiidioma. | Sí | Soporte |
-| **Key Vault** | Componente Adoptado | Almacenamiento seguro de llaves y secretos. | Previene exposición de credenciales. | Sí | Genérico |
-| **Notification Gateway** | Componente Adoptado | Envío centralizado de notificaciones. | Evita construir infraestructura propia. | Sí | Soporte |
-| **Postula2 Back End** | Desarrollo Propio | Núcleo funcional del negocio. | Procesa operaciones críticas del sistema. | No | Core |
-| **Postula2 Front End** | Desarrollo Propio | Interfaz de usuario final. | Facilita acceso y experiencia de usuario. | No | Core |
+| **Database** | Componente Adoptado | Persistencia de datos. | Garantiza consistencia y disponibilidad. | Sí | Genérico |
+| **Parameters Catalog** | Desarrollo Propio | Configuración moderada y clara del sistema. | Permite ajustes sin redeploy. | Sí | Soporte |
+| **Messages Catalog** | Desarrollo Propio | Gestor de mensajes del sistema. | Mejora mantenibilidad y soporte en diferentes idiomas. | Sí | Soporte |
+| **Key Vault** | Componente Adoptado | Almacenamiento seguro informacion critica. | Previene exposición en el codigo de credenciales. | Sí | Genérico |
+| **Notification Gateway** | Componente Adoptado | Envío eficiente de notificaciones. | Evita construir un servicio de notificaciones propio. | Sí | Soporte |
+| **Postula2 Back End** | Desarrollo Propio | Funcional del negocio. | Procesa operaciones criticas del sistema. | No | Core |
+| **Postula2 Front End** | Desarrollo Propio | Interfaz de usuario final. | Permite el facil acceso y experiencia de usuario. | No | Core |
 
 ### **1.2.2 Bloques de Construcción Adoptados**
 
