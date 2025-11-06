@@ -66,9 +66,9 @@ La solución está diseñada bajo un enfoque **cloud-agnostic**, escalables y de
 | IDE Frontend | No | IDE | Microsoft | Visual Studio Code | Latest | Editor robusto, extensible y estándar para web. | Ligero y versátil para desarrollo frontend. |
 | CI(Integracion continua)/CD(Continuo despliegue) | No | Calidad | SonarQube | SonarQube | Latest | Inspección continua de seguridad y estilo. | Garantiza calidad en todo el ciclo. |
 
-### **1.6 El diagrama del arquetipo de solucion es este**
+### **1.5 El diagrama del arquetipo de solucion es este**
 ![Diagrama de arquitectura de Postula2](Arquetipo.png)
-### **1.5 El diagrama de la arquitectura de referencia es este**
+### **1.6 El diagrama de la arquitectura de referencia es este**
 ![Diagrama de arquitectura de Postula2](Arquitectura.png)
 
 
