@@ -12,9 +12,10 @@ La documentacion describe tecnicamente lo siguente:
 - **Componentes:** Módulos lógicos del backend y frontend, y sus funciones.
 - **Paquetes:** Organización interna bajo capas y dependencias controladas.
 - **Secuencias:** Flujos de interacción de casos de uso típicos (UI ↔ API ↔ servicios).
-# **1. Diagrama de Despliegue**
 
-## **Descripción General**
+## **1. Diagrama de Despliegue**
+
+**Descripción General**
 El diagrama de despliegque representa la arquitectura física y lógica de Postula2, mostrando los servicios adoptados y desarrollados, así como su interacción dentro del entorno.  
 La solución está diseñada bajo un enfoque **cloud-agnostic**, escalables y desplegados en servicios administrados, garantizando **alta disponibilidad** y **seguridad** 
 
