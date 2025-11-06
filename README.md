@@ -1,7 +1,7 @@
 # Postula2
 
-Creado por:
-## Simón Tabares Arias
+##Creado por:
+### Simón Tabares Arias
 
 Postula2 es un sistema web que permite tanto la postulación a diferentes cargos o convocatorias como la gestión y publicación de dichas oportunidades. Los usuarios pueden registrarse, postularse y consultar ofertas disponibles, mientras que las organizaciones o administradores pueden crear, administrar y supervisar los procesos de selección de manera centralizada y eficiente.
 El sistema tiene un enfoque basado en una arquitectura modular la cual nos permite tener una baja cohesion y un alto acoplamiento. Priorizando temas como la **seguridad**, **escalabilidad** y **disponibilidad**
