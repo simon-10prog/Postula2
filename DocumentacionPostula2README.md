@@ -64,7 +64,7 @@ La solución está diseñada bajo un enfoque **cloud-agnostic**, escalables y de
 | Base de Datos Serverless | No | DB Cloud | AWS | Amazon Aurora Serverless | Latest | PostgreSQL serverless con escalado automático. | Optimiza costos y ajusta recursos |
 | Front End Postula2 | No | Framework | Google | React | 19 | Framework UI moderno basado en Javascrpit. | Soporta modularidad y escalabilidad UI. |
 | IDE Frontend | No | IDE | Microsoft | Visual Studio Code | Latest | Editor robusto, extensible y estándar para web. | Ligero y versátil para desarrollo frontend. |
-| CI/CD | No | Calidad | SonarQube | SonarQube | Latest | Inspección continua de seguridad y estilo. | Garantiza calidad en todo el ciclo. |
+| CI(Integracion continua)/CD(Continuo despliegue) | No | Calidad | SonarQube | SonarQube | Latest | Inspección continua de seguridad y estilo. | Garantiza calidad en todo el ciclo. |
 
 
 ## Estructura de documentación
