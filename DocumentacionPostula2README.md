@@ -83,11 +83,11 @@ Cada componente encapsula una responsabilidad específica, facilitando la manten
 
 | Componente | Descripción | Motivación / Justificación | Depende / Usa | Tipo de Componente |
 |-----------|-------------|----------------------------|---------------|-------------------|
-| **Postula2 (Backend)** | Núcleo que expone servicios REST para administración del sistema. | Centraliza la lógica del dominio y permite la comunicación con el resto de servicios. | Spring Boot 3.7, Java 21, PostgreSQL, Key Vault, API Gateway | **Componente a Desarrollar (Core)** |
+| **Backend Postula2** | Núcleo que expone servicios REST para administración del sistema. | Centraliza la lógica del dominio y permite la comunicación con el resto de servicios. | Spring Boot 3.7, Java 21, PostgreSQL, Key Vault, API Gateway | **Componente a Desarrollar (Core)** |
 | **Spring framework 4.3** | Framework de desarrollo del backend. | Facilita modularidad y despliegue. | Java 21 | Framework / Acelerador |
 | **Java 21** | Plataforma base del backend. | LTS, rendimiento y estabilidad. | - | Plataforma Base |
 | **PostgreSQL JDBC + Spring Data JPA** | Manejo de persistencia mediante repositorios. | Reduce complejidad y garantiza un acceso seguro a la base de datos. | PostgreSQL | Librería / Conector |
-| **Spring Security+JWT ** | Validacion de autenticación y autorización basada en JWT. | Garantiza acceso seguro. | JWT | Framework / Acelerador |
+| **Spring Security+JWT** | Validacion de autenticación y autorización basada en JWT. | Garantiza acceso seguro. | JWT | Framework / Acelerador |
 | **Cloudflare Secure Access Service Edge(SASE)** | Obtención segura de credenciales. | Evita exposición de claves en código. | Zero trust | Integración / Servicio Externo |
 | **Spring Web / Spring WebFlux** | Exposición de APIs REST y comunicación reactiva. | Reduce latencia en integraciones externas concurrentes. | Reactor | Framework / Acelerador |
 | **Springdoc-openapi+Swagger UI** | Documentación automática de API y consola interactiva. | Facilita integración con otros equipos y clientes. | Spring Web | Framework / Acelerador |
