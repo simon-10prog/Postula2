@@ -83,18 +83,18 @@ Cada componente encapsula una responsabilidad específica, facilitando la manten
 
 | Componente | Descripción | Motivación / Justificación | Depende / Usa | Tipo de Componente |
 |-----------|-------------|----------------------------|---------------|-------------------|
-| **Backend Postula2** | Núcleo que expone servicios REST para administración del sistema. | Centraliza la lógica del dominio y permite la comunicación con el resto de servicios. | Spring Boot 3.7, Java 21, PostgreSQL, Key Vault, API Gateway | **Componente a Desarrollar (Core)** |
+| **Backend Postula2** | Núcleo que expone servicios REST para administración del sistema. | Centraliza la lógica del dominio y permite la comunicación con el resto de servicios. | Spring Boot 4.3, Java 21, PostgreSQL, Key Vault, API Gateway | **Componente a Desarrollar (Core)** |
 | **Spring framework 4.3** | Framework de desarrollo del backend. | Facilita modularidad y despliegue. | Java 21 | Framework / Acelerador |
 | **Java 21** | Plataforma base del backend. | LTS, rendimiento y estabilidad. | JDK| Plataforma Base |
 | **PostgreSQL JDBC+Spring Data JPA** | Manejo de persistencia mediante repositorios. | Reduce complejidad y garantiza un acceso seguro a la base de datos. | PostgreSQL | Librería / Conector |
-| **Spring Security+JWT** | Validacion de autenticación y autorización basada en JWT. | Garantiza acceso seguro. | JWT | Framework / Acelerador |
+| **Spring Security+JWT** | Validacion de autenticación y autorización basada en JWT. | Garantiza acceso seguro. | Spring | Framework / Acelerador |
 | **Cloudflare Secure Access Service Edge(SASE)** | Obtención segura de credenciales. | Evita exposición de claves en código. | Zero trust | Integración / Servicio Externo |
-| **Spring Web / Spring WebFlux** | Exposición de APIs REST y comunicación reactiva. | Reduce latencia en integraciones externas concurrentes. | Reactor | Framework / Acelerador |
-| **Springdoc-openapi+Swagger UI** | Documentación automática de API y consola interactiva. | Facilita integración con otros equipos y clientes. | Spring Web | Framework / Acelerador |
+| **Spring Web / Spring WebFlux** | Exposición de APIs REST y comunicación reactiva. | Reduce latencia en integraciones externas concurrentes. | Spring | Framework / Acelerador |
+| **Springdoc-openapi+Swagger UI** | Documentación automática de API y consola interactiva. | Facilita integración con otros equipos y clientes. | Spring | Framework / Acelerador |
 | **Universal SSL** | Cliente HTTPS para servicios externos. | Estabilidad y soporte amplio. | HTTPS externo | Servicio externo |
-| **FirebaseAppDelegateProxyEnabled** | Gestor centralizado de notificaciones. | Evita desplegar infraestructura de mensajería propia. | HTTP externo | Servicio Externo |
+| **Firebase SDKs** | Gestor centralizado de notificaciones. | Evita desplegar infraestructura de mensajería propia. | HTTP externo | Servicio Externo |
 | **MapStruct** | Generación de mapeos de DTO a Domain. | Valida errores y mejora rendimiento. | Java 21 | Librería |
-| **Actuator** | Exposición de endpoints de monitoreo. | Mejora observabilidad y soporte. | Spring Boot | Framework / Acelerador |
+| **Actuator** | Exposición de endpoints de monitoreo. | Mejora observabilidad y soporte. | Spring | Framework / Acelerador |
 | **CrossCutting** | Funciones reutilizables. | Permite la reutilización y evita duplicación de código. | Java 21 | Acelerador Interno |
 
 
