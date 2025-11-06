@@ -51,7 +51,7 @@ La solución está diseñada bajo un enfoque **cloud-agnostic**, escalables y de
 | Traceability and Monitoring Platform | Sí | AWS | Cloudwatch | Latest | HTTPS | Trazabilidad y deteccion de errores en tiempo real. | Genérico |
 | Database | No | PostgreSQL | PostgreSQL | 16+ | TCP/IP | Base de datos confiable y libre de licencias. | Genérico |
 | Key Vault | Sí | Cloudflare | Workers KV | Latest | HTTPS | Protección de datos con auditoría y control de acceso. | Genérico |
-| Notification Gateway | No | NotificationAPI | NotificationAPI | Latest | HTTPS | Comunicación confiable multicanal. | Soporte |
+| Notification Gateway | No | Google | Firebase cloud messaging| Latest | HTTPS | Comunicación confiable. | Soporte |
 
 ### **1.4 Bloques de Construcción Desarrollados**
 
