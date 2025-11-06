@@ -39,7 +39,7 @@ La solución está diseñada bajo un enfoque **cloud-agnostic**, escalables y de
 | **Postula2 Back End** | Desarrollo Propio | Funcional del negocio. | Procesa operaciones criticas del sistema. | No | Core |
 | **Postula2 Front End** | Desarrollo Propio | Interfaz de usuario final. | Permite el facil acceso y experiencia de usuario. | No | Core |
 
-### **1.2.2 Bloques de Construcción Adoptados**
+### **1.3 Bloques de Construcción Adoptados**
 
 | Componente | ¿Es de Pago? | Fabricante | Producto | Versión | Protocolo | Justificación | Tipo de Bloque |
 |-----------|--------------|------------|----------|---------|-----------|--------------|----------------|
@@ -52,6 +52,19 @@ La solución está diseñada bajo un enfoque **cloud-agnostic**, escalables y de
 | Database | No | PostgreSQL | PostgreSQL | 16+ | TCP/IP | Base de datos confiable y libre de licencias. | Genérico |
 | Key Vault | Sí | Cloudflare | Workers KV | Latest | HTTPS | Protección de datos con auditoría y control de acceso. | Genérico |
 | Notification Gateway | No | NotificationAPI | NotificationAPI | Latest | HTTPS | Comunicación confiable multicanal. | Soporte |
+
+### **1.4 Bloques de Construcción Desarrollados**
+
+| Componente | ¿Pago? | Tipo | Fabricante | Producto | Versión | Descripción | Justificación |
+|-----------|--------|------|------------|----------|---------|-------------|---------------|
+| Back End Postula2 | No | Lenguaje | OpenJDK | Java | 21 | Lenguaje base de la solución. | Versión LTS estable y optimizada. |
+| Back End Postula2 | No | Framework | Spring | Spring Boot | 4.3 | Framework modular y escalable. | Permite una arquitectura mantenible y modular. |
+| IDE Backend | Sí | Entorno de Desarrollo | JetBrains | IntelliJ IDEA | 2024.3.3 | IDE para desarrollo profesional Java. | Aumenta productividad y calidad de código. |
+| Asistente inteligente de Desarrollo | Sí | IA | Microsoft | GitHub Copilot | Latest | Desarrollo asistido. | Optimiza tiempos y detecta errores. |
+| Base de Datos Serverless | No | DB Cloud | AWS | Amazon Aurora Serverless | Latest | PostgreSQL serverless con escalado automático. | Optimiza costos y ajusta recursos |
+| Front End Postula2 | No | Framework | Google | React | 19 | Framework UI moderno basado en Javascrpit. | Soporta modularidad y escalabilidad UI. |
+| IDE Frontend | No | IDE | Microsoft | Visual Studio Code | Latest | Editor robusto, extensible y estándar para web. | Ligero y versátil para desarrollo frontend. |
+| CI/CD | No | Calidad | SonarQube | SonarQube | Latest | Inspección continua de seguridad y estilo. | Garantiza calidad en todo el ciclo. |
 
 
 ## Estructura de documentación
