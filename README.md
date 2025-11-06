@@ -4,6 +4,14 @@ Creado por:
 ## Simón Tabares Arias
 
 Postula2 es un sistema web que permite tanto la postulación a diferentes cargos o convocatorias como la gestión y publicación de dichas oportunidades. Los usuarios pueden registrarse, postularse y consultar ofertas disponibles, mientras que las organizaciones o administradores pueden crear, administrar y supervisar los procesos de selección de manera centralizada y eficiente.
+El sistema tiene un enfoque basado en una arquitectura modular la cual nos permite tener una baja cohesion y un alto acoplamiento. Priorizando temas como la **seguridad**, **escalabilidad** y **disponibilidad**
+
+La documentacion describe tecnicamente lo siguente:
+
+- **Despliegue:** Componentes adoptados y desarrollados, asi como su ubicación en la infraestructura.
+- **Componentes:** Módulos lógicos del backend y frontend, y sus funciones.
+- **Paquetes:** Organización interna bajo capas y dependencias controladas.
+- **Secuencias:** Flujos de interacción de casos de uso típicos (UI ↔ API ↔ servicios).
 
 ## Estructura de documentación
 
