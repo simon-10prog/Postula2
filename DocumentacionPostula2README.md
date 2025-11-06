@@ -96,6 +96,8 @@ Cada componente encapsula una responsabilidad específica, facilitando la manten
 | **Actuator** | Exposición de endpoints de monitoreo. | Mejora observabilidad y soporte. | Spring | Framework / Acelerador |
 | **CrossCutting** | Funciones reutilizables. | Permite la reutilización y evita duplicación de código. | Java 21 | Acelerador Interno |
 
+### **2.3 El diagrama de componentes del BackEnd es este**
+![Diagrama de arquitectura de Postula2](ComponentesBackEnd.png)
 
 ## Estructura de documentación
 
