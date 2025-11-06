@@ -36,6 +36,7 @@ La solución está diseñada bajo un enfoque **cloud-agnostic**, escalables y de
 | **Messages Catalog** | Desarrollo Propio | Gestor de mensajes del sistema. | Mejora mantenibilidad y soporte en diferentes idiomas. | Sí | Soporte |
 | **Key Vault** | Componente Adoptado | Almacenamiento seguro informacion critica. | Previene exposición en el codigo de credenciales. | Sí | Genérico |
 | **Notification Gateway** | Componente Adoptado | Envío eficiente de notificaciones. | Evita construir un servicio de notificaciones propio. | Sí | Soporte |
+| **Container Management** | Componente Adoptado | Despliegue y ejecución de contenedores. | Garantiza portabilidad y escalado. | Sí | Genérico |
 | **Postula2 Back End** | Desarrollo Propio | Funcional del negocio. | Procesa operaciones criticas del sistema. | No | Core |
 | **Postula2 Front End** | Desarrollo Propio | Interfaz de usuario final. | Permite el facil acceso y experiencia de usuario. | No | Core |
 
@@ -52,6 +53,7 @@ La solución está diseñada bajo un enfoque **cloud-agnostic**, escalables y de
 | Database | No | PostgreSQL | PostgreSQL | 16+ | TCP/IP | Base de datos confiable y libre de licencias. | Genérico |
 | Key Vault | Sí | Cloudflare | Workers KV | Latest | HTTPS | Protección de datos con auditoría y control de acceso. | Genérico |
 | Notification Gateway | No | Google | Firebase cloud messaging| Latest | HTTPS | Comunicación confiable. | Soporte |
+| Container Management | No | Render | Render Cloud | Latest | HTTPS | Despliegue optimizado. | Genérico |
 
 ### **1.4 Bloques de Construcción Desarrollados**
 
