@@ -91,7 +91,6 @@ Cada componente encapsula una responsabilidad específica, facilitando la manten
 | **Cloudflare Secure Access Service Edge(SASE)** | Obtención segura de credenciales. | Evita exposición de claves en código. | Zero trust | Integración / Servicio Externo |
 | **Spring Web / Spring WebFlux** | Exposición de APIs REST y comunicación reactiva. | Reduce latencia en integraciones externas concurrentes. | Spring | Framework / Acelerador |
 | **Springdoc-openapi+Swagger UI** | Documentación automática de API y consola interactiva. | Facilita integración con otros equipos y clientes. | Spring | Framework / Acelerador |
-| **Universal SSL** | Cliente HTTPS para servicios externos. | Estabilidad y soporte amplio. | HTTPS externo | Servicio externo |
 | **Firebase SDKs** | Gestor centralizado de notificaciones. | Evita desplegar infraestructura de mensajería propia. | HTTP externo | Servicio Externo |
 | **MapStruct** | Generación de mapeos de DTO a Domain. | Valida errores y mejora rendimiento. | Java 21 | Librería |
 | **Actuator** | Exposición de endpoints de monitoreo. | Mejora observabilidad y soporte. | Spring | Framework / Acelerador |
