@@ -15,7 +15,7 @@ La documentacion describe tecnicamente lo siguente:
 
 ## **1. Diagrama de Despliegue**
 
-**Descripción General**
+**Descripción**
 El diagrama de despliegque representa la arquitectura física y lógica de Postula2, mostrando los servicios adoptados y desarrollados, así como su interacción dentro del entorno.  
 La solución está diseñada bajo un enfoque **cloud-agnostic**, escalables y desplegados en servicios administrados, garantizando **alta disponibilidad** y **seguridad** 
 
@@ -73,13 +73,13 @@ La solución está diseñada bajo un enfoque **cloud-agnostic**, escalables y de
 
 # **2. Diagrama de Componentes**
 
-## **2.1 Descripción General**
+## **Descripción**
 El diagrama de componentes representa la estructura de Postula2, identificando los módulos que componen y permiten la solución en el **Backend** y **Frontend**, así como sus dependencias.  
 Cada componente encapsula una responsabilidad específica, facilitando la mantenibilida y escalabilidad del sistema.
 
 ---
 
-## **2.1.2 Componentes del BackEnd**
+## **2.1 Componentes del BackEnd**
 
 | Componente | Descripción | Motivación / Justificación | Depende / Usa | Tipo de Componente |
 |-----------|-------------|----------------------------|---------------|-------------------|
@@ -99,7 +99,7 @@ Cada componente encapsula una responsabilidad específica, facilitando la manten
 ### **El diagrama de componentes del BackEnd es el siguiente:**
 ![Diagrama de componentes de Postula2](ComponenteBackEndPostula2.png)
 
-## **2.1.3 Componentes del FrontEnd**
+## **2.2 Componentes del FrontEnd**
 
 | Componente | Descripción | Motivación / Justificación | Depende / Usa | Tipo de Componente |
 |-----------|-------------|----------------------------|---------------|-------------------|
@@ -183,6 +183,49 @@ El diagrama de paquetes describe como se divide y esta la estructura tanto del B
 
 ### **El diagrama de paquetes del FrontEnd es el siguiente:**
 ![Diagrama de paquetes de Postula2](PaquetesFrontEndPostula2.png)
+
+# **4. Diagrama de Secuencia**
+
+## **Descripción**
+Los diagramas de secuencia muestran el flujo de interacción entre los diferentes elementos del sistema durante la ejecución de un caso de uso, tanto en el **Backend** como en el **Frontend**, siguiendo los principios de Clean Architecture.
+
+- El **diagrama Backend** representa la ejecución transaccional completa desde la petición hasta la persistencia.
+- El **diagrama Frontend** refleja el flujo desde la UI hasta el backend, incluyendo autenticación, interceptores y manejo de errores.
+
+---
+
+## **4.2 Diagrama de Secuencia – Backend (Transacción General)**
+
+### **Descripción**
+Muestra visualmente la ejecución de una transacción en el backend, mostrando cómo interactúan entre ellos
+
+| Nombre | Descripción |
+|--------|-------------|
+| **Frontend** | Cliente que envía la peticion. |
+| **Controller** | Adaptador primario REST que recibe la petición y gestiona el flujo inicial. |
+| **DTO** | Objeto de transferencia de datos para entrada/salida del API. |
+| **Interactor** | Gestiona y valida mapeo del flujo hacia el caso de uso. |
+| **Domain** | Modelo que contiene reglas principales. |
+| **Use Case** | Gestiona la lógica transaccional. |
+| **Validator** | Aplica las reglas de negocio. |
+| **Entity** | Representación de persistencia del backend. |
+| **Repository** | Puerto de entrada a la base de datos. |
+
+###**Interaccion**
+
+| Postulaciones | Frontend | Controller | El cliente envía la solicitud. |
+| mapeoDTO | Controller | DTO | Se valida y transforma la entrada a un DTO estándar. |
+| DTOdeRetorno | DTO | Controller | Se retorna el DTO para continuar el flujo. |
+| ejecutarDTO | Controller | Interactor | Se hace la ejecución con el DTO recibido. |
+| mapeoDomain | Interactor | Domain | Se valida y convierte el DTO a un objeto de dominio. |
+| DomaindeRetorno | Domain | Interactor | Se entrega el objeto de dominio preparado. |
+| ejecutarDomain | Interactor | Use Case | Se invoca el caso de uso transaccional. |
+| ValidarDatos | Use Case | Validator | Se validan las reglas de negocio del dominio. |
+| confirmacion/denegado | Validator | Use Case | Confirmación o excepción si no cumple reglas. |
+| mapeoEntity | Use Case | Entity | Se convierte el dominio en una entidad persistente. |
+| EntitydeRetorno | Entity | Use Case | Se retorna la entidad validada para su persistencia. |
+| ejecutarEntity/ejecutarCRUD| Use Case | Repository | Se ejecuta la operación de acceso a datos. |
+| ResultadodeTransaccion | Repository | Use Case | Se recibe el resultado validado del CRUD. |
 
 ## Estructura de documentación
 
