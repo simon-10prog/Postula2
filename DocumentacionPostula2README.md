@@ -118,7 +118,7 @@ Cada componente encapsula una responsabilidad específica, facilitando la manten
 ## **3.1 Descripción**
 El diagrama de paquetes describe como se divide y esta la estructura tanto del Backend como del Frontend en Postula2, siguiendo los principios de **Clean Architecture**, donde las dependencias fluyen desde capas externas hacia capas internas, protegiendo el dominio del negocio contra detalles tecnológicos.
 
-## **3.2 Paquetes — Backend **
+## **3.2 Paquetes — Backend**
 
 | Paquete | Paquete Padre | Descripción | Usa/Importa |
 |--------|----------------|-------------|-------------|
