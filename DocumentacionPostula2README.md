@@ -181,6 +181,8 @@ El diagrama de paquetes describe como se divide y esta la estructura tanto del B
 | **services** | **src** | Contiene toda la lógica de conexión con APIs externas.| utils |
 | **hooks** | **src** | Custom hooks para lógica reutilizable (manejo de formularios, autenticación, etc.) | services, utils |
 
+### **El diagrama de paquetes del FrontEnd es el siguiente:**
+![Diagrama de paquetes de Postula2](PaquetesFrontEndPostula2.png)
 
 ## Estructura de documentación
 
