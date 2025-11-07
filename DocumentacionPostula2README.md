@@ -103,12 +103,11 @@ Cada componente encapsula una responsabilidad específica, facilitando la manten
 
 | Componente | Descripción | Motivación / Justificación | Depende / Usa | Tipo de Componente |
 |-----------|-------------|----------------------------|---------------|-------------------|
-| **Framework React** | El núcleo de la aplicación.  | react contiene la lógica y los componentes, y react-dom se encarga de renderizarlos en el navegador.. 
+| **Framework Base React** | El núcleo de la aplicación. | react contiene la lógica y los componentes, y react-dom se encarga de renderizarlos en el navegador. | vite SPA, axios | **Core**
 | **Vite SPA** | Es un SPA (Single Page Application) rápido y simple, que reescribe la pagina web de forma dinamica. | Rendimiento y modularidad. | - | Librería Externa |
-| **vue-router 4.8.3** | Manejador de rutas y guards de navegación. | Control de flujo por roles y autenticación. | Vue 3 | librería Externa |
-| **@auth0/auth0-vue** | SDK para autenticación y manejo de sesión. | Externaliza seguridad y simplifica integración con Auth0. | Auth0 (OIDC/JWT), vue-router | Integración / Servicio Externo |
-| **axios 1.12.2** | Cliente HTTP con interceptores. | Centraliza manejo de headers, tokens y errores. | auth0-vue, API Gateway | Librería Externa |
-| **tailwindcss 4.1.14** | Framework utilitario CSS. | Consistencia visual, rapidez en maquetación y soporte dark mode. | - | Librería Externa |
+| **Next.js** | framework completo ideal si necesitas Server-Side Rendering (SSR) | Proporciona un ruteo avanzado o una estructura de aplicación más grande y orientada a la producción..| Next,js | Framework |
+| **axios 1.12.2** | Cliente HTTP con interceptores. | Centraliza manejo de headers, tokens y errores. | API Gateway | Librería Externa |
+| **react-router-dom** | Maneja la lógica de la URL en el navegador. | Decide qué componentes de React deben mostrarse según esa URL, sin tener que recargar toda la página desde el servidor.. | - | Librería Externa |
 
 ## Estructura de documentación
 
