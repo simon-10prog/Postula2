@@ -105,9 +105,9 @@ Cada componente encapsula una responsabilidad específica, facilitando la manten
 |-----------|-------------|----------------------------|---------------|-------------------|
 | **Framework Base React** | El núcleo de la aplicación. | react contiene la lógica y los componentes, y react-dom se encarga de renderizarlos en el navegador. | vite SPA, axios | **Core**
 | **Vite SPA** | Es un SPA (Single Page Application) rápido y simple, que reescribe la pagina web de forma dinamica. | Rendimiento y modularidad. | - | Librería Externa |
-| **Next.js** | framework completo ideal si necesitas Server-Side Rendering (SSR) | Proporciona un ruteo avanzado o una estructura de aplicación más grande y orientada a la producción..| Next,js | Framework |
-| **axios 1.12.2** | Cliente HTTP con interceptores. | Centraliza manejo de headers, tokens y errores. | API Gateway | Librería Externa |
-| **react-router-dom** | Maneja la lógica de la URL en el navegador. | Decide qué componentes de React deben mostrarse según esa URL, sin tener que recargar toda la página desde el servidor.. | - | Librería Externa |
+| **Next.js** | framework completo ideal si necesitas Server-Side Rendering (SSR) | Proporciona un ruteo avanzado o una estructura de aplicación más grande y orientada a la producción..| - | Framework |
+| **axios** | Cliente HTTP con interceptores. | Centraliza manejo de headers, tokens y errores. | API Gateway | Librería Externa |
+| **react-router-dom** | Maneja la lógica de la URL en el navegador. | Decide qué componentes de React deben mostrarse según esa URL, sin tener que recargar toda la página desde el servidor.. | Next.js | Librería Externa |
 
 ## Estructura de documentación
 
