@@ -228,6 +228,8 @@ Muestra visualmente la ejecución de una transacción en el backend, mostrando c
 | EntitydeRetorno | Entity | Use Case | Se retorna la entidad validada para su persistencia. |
 | ejecutarEntity/ejecutarCRUD| Use Case | Repository | Se ejecuta la operación de acceso a datos. |
 | ResultadodeTransaccion | Repository | Use Case | Se recibe el resultado validado del CRUD. |
+| ValidaciondeTransaccion | Use Case | DTO | Se recibe la validacion de la transaccion |
+| RespuestadeTransaccion | DTO | Frontend | Se recibe la respuesta de la transaccion |
 
 ![Diagrama de secuencias de Postula2](SecuenciasBackEndPostula2.png)
 ## Estructura de documentación
