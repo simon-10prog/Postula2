@@ -108,6 +108,7 @@ Cada componente encapsula una responsabilidad específica, facilitando la manten
 | **Next.js** | framework completo ideal si necesitas Server-Side Rendering (SSR) | Proporciona un ruteo avanzado o una estructura de aplicación más grande y orientada a la producción..| - | Framework |
 | **axios** | Cliente HTTP con interceptores. | Centraliza manejo de headers, tokens y errores. | API Gateway | Librería Externa |
 | **react-router-dom** | Maneja la lógica de la URL en el navegador. | Decide qué componentes de React deben mostrarse según esa URL, sin tener que recargar toda la página desde el servidor.. | JavaScript | Librería Externa |
+| **tailwindcss** | Framework para CSS. | Consistencia visual, rapidez en desarrollo y soporte dark mode. | - | Librería Externa |
 
 ### **El diagrama de componentes del FrontEnd es este**
 ![Diagrama de arquitectura de Postula2](ComponenteFrontendPostula2.png)
