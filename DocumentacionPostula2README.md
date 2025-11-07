@@ -239,10 +239,17 @@ Muestra visualmente la ejecución de una transacción en el backend, mostrando c
 ### **Descripción**
 El diagrama muestra el flujo que sigue el Frontend para ejecutar una acción de negocio (crear, consultar, actualizar o eliminar), garantizando:
 
-- Autenticación y control de sesión con **CloudFlare Access**
-- Transporte seguro mediante **Axios**
-- Protección del flujo mediante **WAF+API Gateway**
-- Manejo de errores, validacion y mensajes con el **Catálogo de Mensajes**
+| Nombre | Descripción |
+|--------|-------------|
+| **assets** | Cliente que envía la peticion. |
+| **Controller** | Adaptador primario REST que recibe la petición y gestiona el flujo inicial. |
+| **DTO** | Objeto de transferencia de datos para entrada/salida del API. |
+| **Interactor** | Gestiona y valida mapeo del flujo hacia el caso de uso. |
+| **Domain** | Modelo que contiene reglas principales. |
+| **Use Case** | Gestiona la lógica transaccional. |
+| **Validator** | Aplica las reglas de negocio. |
+| **Entity** | Representación de persistencia del backend. |
+| **Repository** | Puerto de entrada a la base de datos. |
 
 ### **Interacción (Pasos de la Transacción)**
 
