@@ -113,6 +113,11 @@ Cada componente encapsula una responsabilidad específica, facilitando la manten
 ### **El diagrama de componentes del FrontEnd es este**
 ![Diagrama de arquitectura de Postula2](ComponenteFrontendPostula2.png)
 
+# **3. Diagrama de Paquetes**
+
+## **3.1 Descripción**
+El diagrama de paquetes describe como se divide y esta la estructura tanto del Backend como del Frontend en Postula2, siguiendo los principios de **Clean Architecture**, donde las dependencias fluyen desde capas externas hacia capas internas, protegiendo el dominio del negocio contra detalles tecnológicos.
+
 ## **3.2 Paquetes — Backend **
 
 | Paquete | Paquete Padre | Descripción | Usa/Importa |
@@ -158,6 +163,8 @@ Cada componente encapsula una responsabilidad específica, facilitando la manten
 | **exception** |**crosscutting** | Excepciones compartidas y validadas entre capas. | - |
 | **helpers** | **crosscutting** | Utilidades genéricas de apoyo para la aplicacion. | - |
 
+### **El diagrama de paquetes del BackEnd es este**
+![Diagrama de arquitectura de Postula2](PaquetesBackEndPostula2.png)
 
 ## Estructura de documentación
 
