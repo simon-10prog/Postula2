@@ -115,10 +115,10 @@ Cada componente encapsula una responsabilidad específica, facilitando la manten
 
 # **3. Diagrama de Paquetes**
 
-## **3.1 Descripción**
+## **Descripción**
 El diagrama de paquetes describe como se divide y esta la estructura tanto del Backend como del Frontend en Postula2, siguiendo los principios de **Clean Architecture**, donde las dependencias fluyen desde capas externas hacia capas internas, protegiendo el dominio del negocio contra detalles tecnológicos.
 
-## **3.2 Paquetes — Backend**
+## **3.1 Paquetes — Backend**
 
 | Paquete | Paquete Padre | Descripción | Usa/Importa |
 |--------|----------------|-------------|-------------|
@@ -165,6 +165,22 @@ El diagrama de paquetes describe como se divide y esta la estructura tanto del B
 
 ### **El diagrama de paquetes del BackEnd es el siguiente:**
 ![Diagrama de paquetes de Postula2](PaquetesBackEndPostula2.png)
+
+## **3.3 Paquetes — Frontend**
+
+**Descripción:** Ordenamiento y analisis del código fuente del frontend siguiendo una arquitectura modular con componentes reutilizables, servicios HTTP y utilidades de apoyo.
+
+| Paquete | Paquete Padre | Descripción | Usado/Importa |
+|--------|----------------|-------------|-------------|
+| **src** | - | Contiene todas las carpetas base del proyecto. | - |
+| **assert** | **src** | Contiene todos los recursos estáticos del proyecto, como imágenes, íconos, fuentes, archivos multimedia y hojas de estilo globales (CSS o SCSS).| - |
+| **utils** | **src** | Incluye funciones y utilidades reutilizables y puras (sin depender del estado de React) que ayudan a mantener el código más limpio y organizado.| - |
+| **pages** | **src** | Es el núcleo funcional de la aplicación: cada “página” combina componentes y lógica. | components, hooks, services, utils, assets |
+| **components** | **src** | Contiene componentes reutilizables de UI (botones, inputs, modales, tarjetas, tablas). | hooks, utils, assets |
+| **router** | **src** | Define las rutas de navegación y qué página se muestra.| pages |
+| **services** | **src** | Contiene toda la lógica de conexión con APIs externas.| utils |
+| **hooks** | **src** | Custom hooks para lógica reutilizable (manejo de formularios, autenticación, etc.) | services, utils |
+
 
 ## Estructura de documentación
 
