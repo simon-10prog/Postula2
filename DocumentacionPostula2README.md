@@ -231,6 +231,7 @@ Muestra visualmente la ejecución de una transacción en el backend, mostrando c
 | ValidaciondeTransaccion | Use Case | DTO | Se recibe la validacion de la transaccion |
 | RespuestadeTransaccion | DTO | Frontend | Se recibe la respuesta de la transaccion |
 
+### **El diagrama de paquetes del FrontEnd es el siguiente:**
 ![Diagrama de secuencias de Postula2](SecuenciasBackEndPostula2.png)
 ## Estructura de documentación
 
