@@ -79,7 +79,7 @@ Cada componente encapsula una responsabilidad específica, facilitando la manten
 
 ---
 
-## **2.1.2 Componentes del Backend**
+## **2.1.2 Componentes del BackEnd**
 
 | Componente | Descripción | Motivación / Justificación | Depende / Usa | Tipo de Componente |
 |-----------|-------------|----------------------------|---------------|-------------------|
@@ -99,7 +99,7 @@ Cada componente encapsula una responsabilidad específica, facilitando la manten
 ### **El diagrama de componentes del BackEnd es este**
 ![Diagrama de arquitectura de Postula2](ComponenteBackEndPostula2.png)
 
-## **2.1.3 Componentes del Backend**
+## **2.1.3 Componentes del FrontEnd**
 
 | Componente | Descripción | Motivación / Justificación | Depende / Usa | Tipo de Componente |
 |-----------|-------------|----------------------------|---------------|-------------------|
