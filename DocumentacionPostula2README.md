@@ -241,9 +241,9 @@ El diagrama muestra el flujo que sigue el Frontend para ejecutar una acción de 
 
 | Nombre | Descripción |
 |--------|-------------|
-| **assets** | Cliente que envía la peticion. |
-| **Controller** | Adaptador primario REST que recibe la petición y gestiona el flujo inicial. |
-| **DTO** | Objeto de transferencia de datos para entrada/salida del API. |
+| **Assets** | Cliente que envía la peticion. |
+| **Assets** | Almacena recursos estáticos como imágenes, íconos, fuentes y estilos globales (CSS o SCSS).|
+| **Pages** | Representan las pantallas principales de la aplicación. Cada página combina componentes, lógica y llamadas a servicios. |
 | **Interactor** | Gestiona y valida mapeo del flujo hacia el caso de uso. |
 | **Domain** | Modelo que contiene reglas principales. |
 | **Use Case** | Gestiona la lógica transaccional. |
@@ -255,16 +255,20 @@ El diagrama muestra el flujo que sigue el Frontend para ejecutar una acción de 
 
 | Acción | Origen | Destino | Descripción |
 |-------|--------|---------|-------------|
-| InteracciónUsuario(Crear Postulacion) | Frontend | pages | El usuario llena el formulario y hace clic en “Enviar”. |
-| RenderizarFormulario | pages | components | La página principal renderiza el componente del formulario de postulación.|
-| handleSubmit(manejo de envio) | components | hooks | El componente invoca la lógica de envío definida en un hook personalizado |
-| validarDatos | hooks | utils | El hook usa funciones de utils para validar la información localmente (campos vacíos, formato de correo, etc.).|
-| resultadoValidacion | utils | hooks | utils devuelve el resultado de la validación. Si es correcto, se continúa con el flujo. |
-| crearPostulacion | hooks | services | El hook llama al servicio HTTP encargado de enviar los datos al backend mediante un POST.|
-| respuestaAPI | services | hooks | El servicio retorna la respuesta del servidor (éxito o error). |
-| actualizarEstado | hooks | components | El hook actualiza el estado del formulario y comunica el resultado.|
-| mostrarMensaje | components | assets | El componente usa recursos de assets (íconos, imágenes o estilos) para mostrar mensajes visuales. |
-| redireccionar | pages | router | La página invoca el router para redirigir al usuario a la vista de confirmación o error. |
+| interacciónUsuario(Pagina de Postulacion) | router | pages | El router renderiza la página de postulación al navegar a la ruta correspondiente. |
+| renderizarComponentes | pages | components | La página principal renderiza el componente del formulario de postulación. |
+| inicializarHooks | pages | hooks | El componente invoca la lógica de envío definida en un hook personalizado |
+| cargarRecursosEstáticos | components | assets | El hook usa funciones de utils para validar la información localmente (campos vacíos, formato de correo, etc.). |
+| ingresoDatos | Usuario (UI) | components | El usuario ingresa los datos del formulario (nombre, correo, documento, etc.). |
+| actualizarEstado | components | hooks | Cada cambio de campo actualiza el estado local del formulario mediante hooks |
+| validarDatos | hooks | utils | Antes de enviar, los datos se validan con funciones de utils (por ejemplo, formato de correo o campos requeridos). |
+| enviarDatos(manejodeenvio) | hooks | services | El hook ejecuta handleSubmit, que llama al servicio encargado de enviar los datos al backend. |
+| llamadoHTTP | services | Postula2 API | El servicio realiza una petición HTTP (POST) a la API para crear la postulación. |
+| RespuestaAPI | Postula2 API | services | El backend responde con el resultado (éxito, error o validación fallida). |
+| ProcesarRespuesta | services | hooks | El servicio retorna el resultado y el hook actualiza el estado del formulario (limpia campos o muestra error). |
+| MostrarResultado | hooks | components | Se muestra un mensaje visual (alerta, toast o modal) con el resultado de la transacción. |
+| ActualizarVista | components | pages | Los componentes informan a la página principal para renderizar el nuevo estado (por ejemplo, formulario reseteado o mensaje de éxito). |
+| Redirección | pages | router | El backend responde con el resultado (éxito, error o validación fallida).Si la transacción fue exitosa, el usuario es redirigido a otra ruta o se muestra una vista de confirmación. |
 
 ## Estructura de documentación
 
