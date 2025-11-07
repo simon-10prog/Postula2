@@ -215,7 +215,7 @@ Muestra visualmente la ejecución de una transacción en el backend, mostrando c
 
 | Acción | Origen | Destino | Descripción |
 |-------|--------|---------|-------------|
-| Interaccion de usuario | Frontend | Controller | El cliente envía la solicitud. |
+| InteraccionUsuario | Frontend | Controller | El cliente envía la solicitud. |
 | mapeoDTO | Controller | DTO | Se valida y transforma la entrada a un DTO estándar. |
 | DTOdeRetorno | DTO | Controller | Se retorna el DTO para continuar el flujo. |
 | ejecutarDTO | Controller | Interactor | Se hace la ejecución con el DTO recibido. |
