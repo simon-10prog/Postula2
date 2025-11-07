@@ -122,7 +122,7 @@ El diagrama de paquetes describe como se divide y esta la estructura tanto del B
 
 | Paquete | Paquete Padre | Descripción | Usa/Importa |
 |--------|----------------|-------------|-------------|
-| **co** | - | Paquete raíz del proyecto. | - |
+| **co** | - | Paquete de inicio de la aplicacion. | - |
 | **Postula2** | **co** | Representa el backend de la aplicacion Postula2 y contiene su estructura interna. | - |
 | application | **Postula2** | Gestiona los casos de uso del sistema y la lógica de negocio. | `crosscutting` |
 | **config** | **application** | Configuraciones e inicio de la aplicación. | - |
