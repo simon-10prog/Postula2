@@ -213,6 +213,7 @@ Muestra visualmente la ejecución de una transacción en el backend, mostrando c
 
 ###**Interaccion**
 
+|-------|--------|---------|-------------|
 | Postulaciones | Frontend | Controller | El cliente envía la solicitud. |
 | mapeoDTO | Controller | DTO | Se valida y transforma la entrada a un DTO estándar. |
 | DTOdeRetorno | DTO | Controller | Se retorna el DTO para continuar el flujo. |
@@ -227,5 +228,6 @@ Muestra visualmente la ejecución de una transacción en el backend, mostrando c
 | ejecutarEntity/ejecutarCRUD| Use Case | Repository | Se ejecuta la operación de acceso a datos. |
 | ResultadodeTransaccion | Repository | Use Case | Se recibe el resultado validado del CRUD. |
 
+![Diagrama de secuencias de Postula2](SecuenciasBackEndPostula2.png)
 ## Estructura de documentación
 
