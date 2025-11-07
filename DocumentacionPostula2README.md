@@ -173,7 +173,7 @@ El diagrama de paquetes describe como se divide y esta la estructura tanto del B
 | Paquete | Paquete Padre | Descripción | Usado/Importa |
 |--------|----------------|-------------|-------------|
 | **src** | - | Contiene todas las carpetas base del proyecto. | - |
-| **assert** | **src** | Contiene todos los recursos estáticos del proyecto, como imágenes, íconos, fuentes, archivos multimedia y hojas de estilo globales (CSS o SCSS).| - |
+| **assets** | **src** | Contiene todos los recursos estáticos del proyecto, como imágenes, íconos, fuentes, archivos multimedia y hojas de estilo globales (CSS o SCSS).| - |
 | **utils** | **src** | Incluye funciones y utilidades reutilizables y puras (sin depender del estado de React) que ayudan a mantener el código más limpio y organizado.| - |
 | **pages** | **src** | Es el núcleo funcional de la aplicación: cada “página” combina componentes y lógica. | components, hooks, services, utils, assets |
 | **components** | **src** | Contiene componentes reutilizables de UI (botones, inputs, modales, tarjetas, tablas). | hooks, utils, assets |
