@@ -194,7 +194,7 @@ Los diagramas de secuencia muestran el flujo de interacción entre los diferente
 
 ---
 
-## **4.2 Diagrama de Secuencia – Backend (Transacción General)**
+## **4.1 Diagrama de Secuencia – Backend (Transacción General)**
 
 ### **Descripción**
 Muestra visualmente la ejecución de una transacción en el backend, mostrando cómo interactúan entre ellos
@@ -233,5 +233,16 @@ Muestra visualmente la ejecución de una transacción en el backend, mostrando c
 
 ### **El diagrama de paquetes del FrontEnd es el siguiente:**
 ![Diagrama de secuencias de Postula2](SecuenciasBackEndPostula2.png)
+
+## **4.2 Diagrama de Secuencia – Backend (Transacción General)**
+
+### **Descripción**
+El diagrama muestra el flujo que sigue el Frontend para ejecutar una acción de negocio (crear, consultar, actualizar o eliminar), garantizando:
+
+- Autenticación y control de sesión con **CloudFlare Access**
+- Transporte seguro mediante **Axios**
+- Protección del flujo mediante **WAF+API Gateway**
+- Manejo de errores, validacion y mensajes con el **Catálogo de Mensajes**
+
 ## Estructura de documentación
 
