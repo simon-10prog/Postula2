@@ -117,46 +117,46 @@ Cada componente encapsula una responsabilidad específica, facilitando la manten
 
 | Paquete | Paquete Padre | Descripción | Usa/Importa |
 |--------|----------------|-------------|-------------|
-| `co` | - | Paquete raíz del proyecto. | - |
-| `Postula2` | `co` | Representa el backend de la aplicacion Postula2 y contiene su estructura interna. | - |
-| `application` | `Postula2` | Gestiona los casos de uso del sistema y la lógica de negocio. | `crosscutting` |
-| `config` | `application` | Configuraciones e inicio de la aplicación. | - |
-| `interactor` | `application` | Gestion lógica de los flujos transaccionales. | - |
-| `usecase` | `interactor` | Contrato de los casos de uso que expone los modulos. | - |
-| `domain` | `Postula2` | Modelo de dominio con entidades y objetos de valor. | - |
-| `infrastructure` | `Postula2` | Implementacion técnica: controladores, persistencia e integraciones externas. | `application`, `domain` |
-| `primary` | `infrastructure` | Adaptadores de entrada para los modulos. | - |
-| `controller` | `primary` | Controladores REST expuestos. | `application.interactor.dto`, `application.interactor` |
-| `response` | `controller` |  Respuesta enviados por el API. | `controller` |
-| `exception` | `primary` | Manejo de excepciones para los controladores. | `crosscutting` |
-| `security` | `infrastructure` | Componentes de autenticación y autorización de seguridad. | `application`, `crosscutting` |
-| `secondary` | `infrastructure` | Adaptadores de salida. | - |
-| `adapters` | `secondary` | Implementacion para integraciones externas. | `secondary.ports` |
-| `config` | `adapters` | Configuracion de adaptadores externos. | `ports.repository` |
-| `messages` | `adapters` | Adaptador de obtener el catálogo de mensajes externo. | `ports.repository.messages` |
-| `notifications` | `adapters` | Adaptador de envío de notificaciones externas. | `ports.repository.notifications` |
-| `parameters` | `adapters` | Adaptador de consulta de parámetros. | `ports.repository.parameters` |
-| `repository` | `adapters` | Implementacion de persistencia de informacion. | `ports.repository` |
-| `entity` | `repository` | Entidades de persistencia (ej. JPA/Hibernate). | `domain` |
-| `ports` | `secondary` | Contrato de adaptadores de salida. | - |
-| `repository` | `ports` | Interfacz de acceso a persistencia. | `domain` |
-| `messages` | `repository` | Contrato de acceso a mensajes externos. | - |
-| `notifications` | `repository` | Contrato de servicio de notificaciones. | - |
-| `parameters` | `repository` | Contrato de parámetros del sistema. | - |
-| `entity` | `Postula2` | Entidades lógicas del modelo transaccional. | `crosscutting` |
-| `transaction` | `entity` | Límites y contextos transaccionales. | - |
-| `application` | `transaction` | Gestion de acciones bajo contexto transaccional. | `postula2.application` |
-| `mapper` | `application` | Conversión entre dominio y DTO. | `interactor.usecase.domain`, `interactor.dto` |
-| `messages` | `application` | Gestión de mensajes de la aplicacion. | `adapters.messages` |
-| `parameters` | `application` | Obtención de parámetros para la aplicacion. | `adapters.parameters` |
-| `impl` | `interactor` | Implementacion clara de interactores. | `usecase`, `mapper`, `dto` |
-| `dto` | `interactor` | Objetos de transferencia de dto utilizado por interactores. | `domain` |
-| `impl` | `usecase` | Implementacion clara de casos de uso. | `usecase.domain`, `repository.entity`, `ports.repository` |
-| `mapper` | `usecase` | Mapeos en contexto del caso de uso. | `secondary.repository`, `usecase.domain` |
-| `domain` | `usecase` | Modelo de dominio del caso de uso. | - |
-| `crosscutting` | `Postula2` | Recursos reutilizables. | - |
-| `exception` | `crosscutting` | Excepciones compartidas y validadas entre capas. | - |
-| `helpers` | `crosscutting` | Utilidades genéricas de apoyo para la aplicacion. | - |
+| **co** | - | Paquete raíz del proyecto. | - |
+| **Postula2** | **co** | Representa el backend de la aplicacion Postula2 y contiene su estructura interna. | - |
+| application | **Postula2** | Gestiona los casos de uso del sistema y la lógica de negocio. | `crosscutting` |
+| **config** | **application** | Configuraciones e inicio de la aplicación. | - |
+| **interactor** | **application** | Gestion lógica de los flujos transaccionales. | - |
+| **usecase** | **interactor** | Contrato de los casos de uso que expone los modulos. | - |
+| **domain** | **Postula2** | Modelo de dominio con entidades y objetos de valor. | - |
+| **infrastructure** | **Postula2** | Implementacion técnica: controladores, persistencia e integraciones externas. | `application`, `domain` |
+| **primary** | **infrastructure** | Adaptadores de entrada para los modulos. | - |
+| **controller** | **primary** | Controladores REST expuestos. | `application.interactor.dto`, `application.interactor` |
+| **response** | **controller** |  Respuesta enviados por el API. | `controller` |
+| **exception** | **primary** | Manejo de excepciones para los controladores. | `crosscutting` |
+| **security** | **infrastructure** | Componentes de autenticación y autorización de seguridad. | `application`, `crosscutting` |
+| **secondary** | **infrastructure** | Adaptadores de salida. | - |
+| **adapters** | **secondary** | Implementacion para integraciones externas. | `secondary.ports` |
+| **config** | **adapters** | Configuracion de adaptadores externos. | `ports.repository` |
+| **messages** | **adapters** | Adaptador de obtener el catálogo de mensajes externo. | `ports.repository.messages` |
+| **notifications** | **adapters** | Adaptador de envío de notificaciones externas. | `ports.repository.notifications` |
+| **parameters** | **adapters** | Adaptador de consulta de parámetros. | `ports.repository.parameters` |
+| **repository** | **adapters** | Implementacion de persistencia de informacion. | `ports.repository` |
+| **entity** | **repository** | Entidades de persistencia (ej. JPA/Hibernate). | `domain` |
+| **ports** | **secondary** | Contrato de adaptadores de salida. | - |
+| **repository** | **ports** | Interfacz de acceso a persistencia. | `domain` |
+| **messages** | **repository** | Contrato de acceso a mensajes externos. | - |
+| **notifications** | **repository** | Contrato de servicio de notificaciones. | - |
+| **parameters** | **repository** | Contrato de parámetros del sistema. | - |
+| **entity** | **Postula2** | Entidades lógicas del modelo transaccional. | `crosscutting` |
+| **transaction** | **entity** | Límites y contextos transaccionales. | - |
+| **application** | **transaction** | Gestion de acciones bajo contexto transaccional. | `postula2.application` |
+| **mapper** | **application** | Conversión entre dominio y DTO. | `interactor.usecase.domain`, `interactor.dto` |
+| **messages* | **application** | Gestión de mensajes de la aplicacion. | `adapters.messages` |
+| **parameters** | **application** | Obtención de parámetros para la aplicacion. | `adapters.parameters` |
+| **impl** | **interactor** | Implementacion clara de interactores. | `usecase`, `mapper`, `dto` |
+| **dto** | **interactor** | Objetos de transferencia de dto utilizado por interactores. | `domain` |
+| **impl** | **usecase** | Implementacion clara de casos de uso. | `usecase.domain`, `repository.entity`, `ports.repository` |
+| **mapper** | **usecase** | Mapeos en contexto del caso de uso. | `secondary.repository`, `usecase.domain` |
+| **domain** | **usecase** | Modelo de dominio del caso de uso. | - |
+| **crosscutting** | **Postula2** | Recursos reutilizables. | - |
+| **exception** |**crosscutting** | Excepciones compartidas y validadas entre capas. | - |
+| **helpers** | **crosscutting** | Utilidades genéricas de apoyo para la aplicacion. | - |
 
 
 ## Estructura de documentación
