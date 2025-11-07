@@ -215,7 +215,7 @@ Muestra visualmente la ejecución de una transacción en el backend, mostrando c
 
 | Acción | Origen | Destino | Descripción |
 |-------|--------|---------|-------------|
-| Crear Postulacion | Frontend | Controller | El cliente envía la solicitud. |
+| Interaccion de usuario | Frontend | Controller | El cliente envía la solicitud. |
 | mapeoDTO | Controller | DTO | Se valida y transforma la entrada a un DTO estándar. |
 | DTOdeRetorno | DTO | Controller | Se retorna el DTO para continuar el flujo. |
 | ejecutarDTO | Controller | Interactor | Se hace la ejecución con el DTO recibido. |
@@ -243,6 +243,21 @@ El diagrama muestra el flujo que sigue el Frontend para ejecutar una acción de 
 - Transporte seguro mediante **Axios**
 - Protección del flujo mediante **WAF+API Gateway**
 - Manejo de errores, validacion y mensajes con el **Catálogo de Mensajes**
+
+### **Interacción (Pasos de la Transacción)**
+
+| Acción | Origen | Destino | Descripción |
+|-------|--------|---------|-------------|
+| InteracciónUsuario(Crear Postulacion) | Frontend | pages | El usuario llena el formulario y hace clic en “Enviar”. |
+| RenderizarFormulario | pages | components | La página principal renderiza el componente del formulario de postulación.|
+| handleSubmit(manejo de envio) | components | hooks | El componente invoca la lógica de envío definida en un hook personalizado |
+| validarDatos | hooks | utils | El hook usa funciones de utils para validar la información localmente (campos vacíos, formato de correo, etc.).|
+| resultadoValidacion | utils | hooks | utils devuelve el resultado de la validación. Si es correcto, se continúa con el flujo. |
+| crearPostulacion | hooks | services | El hook llama al servicio HTTP encargado de enviar los datos al backend mediante un POST.|
+| respuestaAPI | services | hooks | El servicio retorna la respuesta del servidor (éxito o error). |
+| actualizarEstado | hooks | components | El hook actualiza el estado del formulario y comunica el resultado.|
+| mostrarMensaje | components | assets | El componente usa recursos de assets (íconos, imágenes o estilos) para mostrar mensajes visuales. |
+| redireccionar | pages | router | La página invoca el router para redirigir al usuario a la vista de confirmación o error. |
 
 ## Estructura de documentación
 
