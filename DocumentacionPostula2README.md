@@ -103,7 +103,7 @@ Cada componente encapsula una responsabilidad específica, facilitando la manten
 
 | Componente | Descripción | Motivación / Justificación | Depende / Usa | Tipo de Componente |
 |-----------|-------------|----------------------------|---------------|-------------------|
-| **Framework Base React** | El núcleo de la aplicación. | react contiene la lógica y los componentes, y react-dom se encarga de renderizarlos en el navegador. | vite SPA, axios, Next.js, tailwindCSS | **Core**
+| **Framework Base React** | El núcleo de la aplicación. | react contiene la lógica y los componentes, y react-dom se encarga de renderizarlos en el navegador. | vite SPA, axios, react-router-dom, tailwindCSS | **Core**
 | **Vite SPA** | Es un SPA (Single Page Application) rápido y simple, que reescribe la pagina web de forma dinamica. | Rendimiento y modularidad. | - | Librería Externa |
 | **Next.js** | framework completo ideal si necesitas Server-Side Rendering (SSR) | Proporciona un ruteo avanzado o una estructura de aplicación más grande y orientada a la producción..| - | Framework |
 | **axios** | Cliente HTTP con interceptores. | Centraliza manejo de headers, tokens y errores. | API Gateway | Librería Externa |
