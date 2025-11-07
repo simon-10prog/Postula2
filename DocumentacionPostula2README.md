@@ -211,8 +211,9 @@ Muestra visualmente la ejecución de una transacción en el backend, mostrando c
 | **Entity** | Representación de persistencia del backend. |
 | **Repository** | Puerto de entrada a la base de datos. |
 
-###**Interaccion**
+### **Interacción (Pasos de la Transacción)**
 
+| Acción | Origen | Destino | Descripción |
 |-------|--------|---------|-------------|
 | Postulaciones | Frontend | Controller | El cliente envía la solicitud. |
 | mapeoDTO | Controller | DTO | Se valida y transforma la entrada a un DTO estándar. |
