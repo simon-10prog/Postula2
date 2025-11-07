@@ -109,6 +109,10 @@ Cada componente encapsula una responsabilidad específica, facilitando la manten
 | **axios** | Cliente HTTP con interceptores. | Centraliza manejo de headers, tokens y errores. | API Gateway | Librería Externa |
 | **react-router-dom** | Maneja la lógica de la URL en el navegador. | Decide qué componentes de React deben mostrarse según esa URL, sin tener que recargar toda la página desde el servidor.. | JavaScript | Librería Externa |
 
+### **El diagrama de componentes del FrontEnd es este**
+![Diagrama de arquitectura de Postula2](ComponenteFrontEndPostula2.png)
+
+
 ## Estructura de documentación
 
 Toda la documentación relevante se encontrará en la carpeta `Documentacion Postula2`, por ejemplo:
