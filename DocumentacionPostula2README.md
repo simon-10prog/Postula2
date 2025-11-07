@@ -132,7 +132,7 @@ El diagrama de paquetes describe como se divide y esta la estructura tanto del B
 | **infrastructure** | **Postula2** | Implementacion técnica: controladores, persistencia e integraciones externas. | `application`, `domain` |
 | **primary** | **infrastructure** | Adaptadores de entrada para los modulos. | - |
 | **controller** | **primary** | Controladores REST expuestos. | `application.interactor.dto`, `application.interactor` |
-| **response** | **controller** |  Respuesta enviados por el API. | `controller` |
+| **response** | **controller** |  Respuestas enviadas por el API. | `controller` |
 | **exception** | **primary** | Manejo de excepciones para los controladores. | `crosscutting` |
 | **security** | **infrastructure** | Componentes de autenticación y autorización de seguridad. | `application`, `crosscutting` |
 | **secondary** | **infrastructure** | Adaptadores de salida. | - |
