@@ -68,7 +68,7 @@ La solución está diseñada bajo un enfoque **cloud-agnostic**, escalables y de
 | IDE Frontend | No | IDE | Microsoft | Visual Studio Code | Latest | Editor robusto, extensible y estándar para web. | Ligero y versátil para desarrollo frontend. |
 | CI(Integracion continua)/CD(Continuo despliegue) | No | Calidad | SonarQube | SonarQube | Latest | Inspección continua de seguridad y estilo. | Garantiza calidad en todo el ciclo. |
 
-### **1.5 El diagrama del arquetipo de solucion es este**
+### **1.5 El diagrama del arquetipo de solucion es el siguiente:**
 ![Diagrama de arquitectura de Postula2](ArquitecturaPostula2.png)
 
 # **2. Diagrama de Componentes**
@@ -96,8 +96,8 @@ Cada componente encapsula una responsabilidad específica, facilitando la manten
 | **Actuator** | Exposición de endpoints de monitoreo. | Mejora observabilidad y soporte. | Spring | Framework / Acelerador |
 | **CrossCutting** | Funciones reutilizables. | Permite la reutilización y evita duplicación de código. | Java 21 | Acelerador Interno |
 
-### **El diagrama de componentes del BackEnd es este**
-![Diagrama de arquitectura de Postula2](ComponenteBackEndPostula2.png)
+### **El diagrama de componentes del BackEnd es el siguiente:**
+![Diagrama de componentes de Postula2](ComponenteBackEndPostula2.png)
 
 ## **2.1.3 Componentes del FrontEnd**
 
@@ -110,8 +110,8 @@ Cada componente encapsula una responsabilidad específica, facilitando la manten
 | **react-router-dom** | Maneja la lógica de la URL en el navegador. | Decide qué componentes de React deben mostrarse según esa URL, sin tener que recargar toda la página desde el servidor.. | JavaScript | Librería Externa |
 | **tailwindcss** | Framework para CSS. | Consistencia visual, rapidez en desarrollo y soporte dark mode. | - | Librería Externa |
 
-### **El diagrama de componentes del FrontEnd es este**
-![Diagrama de arquitectura de Postula2](ComponenteFrontendPostula2.png)
+### **El diagrama de componentes del FrontEnd es el siguiente:**
+![Diagrama de componentes de Postula2](ComponenteFrontendPostula2.png)
 
 # **3. Diagrama de Paquetes**
 
@@ -163,8 +163,8 @@ El diagrama de paquetes describe como se divide y esta la estructura tanto del B
 | **exception** |**crosscutting** | Excepciones compartidas y validadas entre capas. | - |
 | **helpers** | **crosscutting** | Utilidades genéricas de apoyo para la aplicacion. | - |
 
-### **El diagrama de paquetes del BackEnd es este**
-![Diagrama de arquitectura de Postula2](PaquetesBackEndPostula2.png)
+### **El diagrama de paquetes del BackEnd es el siguiente:**
+![Diagrama de paquetes de Postula2](PaquetesBackEndPostula2.png)
 
 ## Estructura de documentación
 
