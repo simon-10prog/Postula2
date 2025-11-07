@@ -79,7 +79,7 @@ Cada componente encapsula una responsabilidad específica, facilitando la manten
 
 ---
 
-## **2.2 Componentes del Backend**
+## **2.1.2 Componentes del Backend**
 
 | Componente | Descripción | Motivación / Justificación | Depende / Usa | Tipo de Componente |
 |-----------|-------------|----------------------------|---------------|-------------------|
@@ -96,8 +96,19 @@ Cada componente encapsula una responsabilidad específica, facilitando la manten
 | **Actuator** | Exposición de endpoints de monitoreo. | Mejora observabilidad y soporte. | Spring | Framework / Acelerador |
 | **CrossCutting** | Funciones reutilizables. | Permite la reutilización y evita duplicación de código. | Java 21 | Acelerador Interno |
 
-### **2.3 El diagrama de componentes del BackEnd es este**
+### **El diagrama de componentes del BackEnd es este**
 ![Diagrama de arquitectura de Postula2](ComponenteBackEndPostula2.png)
+
+## **2.1.3 Componentes del Backend**
+
+| Componente | Descripción | Motivación / Justificación | Depende / Usa | Tipo de Componente |
+|-----------|-------------|----------------------------|---------------|-------------------|
+| **Framework React** | El núcleo de la aplicación.  | react contiene la lógica y los componentes, y react-dom se encarga de renderizarlos en el navegador.. 
+| **Vite SPA** | Es un SPA (Single Page Application) rápido y simple, que reescribe la pagina web de forma dinamica. | Rendimiento y modularidad. | - | Librería Externa |
+| **vue-router 4.8.3** | Manejador de rutas y guards de navegación. | Control de flujo por roles y autenticación. | Vue 3 | librería Externa |
+| **@auth0/auth0-vue** | SDK para autenticación y manejo de sesión. | Externaliza seguridad y simplifica integración con Auth0. | Auth0 (OIDC/JWT), vue-router | Integración / Servicio Externo |
+| **axios 1.12.2** | Cliente HTTP con interceptores. | Centraliza manejo de headers, tokens y errores. | auth0-vue, API Gateway | Librería Externa |
+| **tailwindcss 4.1.14** | Framework utilitario CSS. | Consistencia visual, rapidez en maquetación y soporte dark mode. | - | Librería Externa |
 
 ## Estructura de documentación
 
