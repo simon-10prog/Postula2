@@ -124,7 +124,7 @@ El diagrama de paquetes describe como se divide y esta la estructura tanto del B
 |--------|----------------|-------------|-------------|
 | **co** | - | Paquete de inicio de la aplicacion. | - |
 | **Postula2** | **co** | Representa el backend de la aplicacion Postula2 y contiene su estructura interna. | - |
-| application | **Postula2** | Gestiona los casos de uso del sistema y la lógica de negocio. | `crosscutting` |
+| **application** | **Postula2** | Gestiona los casos de uso del sistema y la lógica de negocio. | `crosscutting` |
 | **config** | **application** | Configuraciones e inicio de la aplicación. | - |
 | **interactor** | **application** | Gestion lógica de los flujos transaccionales. | - |
 | **usecase** | **interactor** | Contrato de los casos de uso que expone los modulos. | - |
