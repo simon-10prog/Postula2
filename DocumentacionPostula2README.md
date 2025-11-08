@@ -69,7 +69,7 @@ La solución está diseñada bajo un enfoque **cloud-agnostic**, escalables y de
 | CI(Integracion continua)/CD(Continuo despliegue) | No | Calidad | SonarQube | SonarQube | Latest | Inspección continua de seguridad y estilo. | Garantiza calidad en todo el ciclo. |
 
 ### **1.5 El diagrama de despliegue de  es el siguiente:**
-![Diagrama de arquitectura de Postula2](ArquitecturadeeDesplieguePostula2.png)
+![Diagrama de arquitectura de Postula2](ArquitecturadeDesplieguePostula2.png)
 
 # **2. Diagrama de Componentes**
 
