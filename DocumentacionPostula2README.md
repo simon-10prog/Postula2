@@ -271,6 +271,3 @@ El diagrama muestra el flujo que sigue el Frontend para ejecutar una acción de 
 
 ### **El diagrama de paquetes del FrontEnd es el siguiente:**
 ![Diagrama de secuencias de Postula2](SecuenciasFrontEndPostula2.png)
-
-## Estructura de documentación
-
