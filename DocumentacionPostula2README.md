@@ -241,14 +241,15 @@ El diagrama muestra el flujo que sigue el Frontend para ejecutar una acción de 
 
 | Nombre | Descripción |
 |--------|-------------|
-| **Assets** | Cliente que envía la peticion. |
-| **Assets** | Almacena recursos estáticos como imágenes, íconos, fuentes y estilos globales (CSS o SCSS).|
+| **InteraccionUsuario** | Cliente que envía la peticion. |
+| **Router** | Define la navegación y rutas de la aplicación, controlando qué página se renderiza según la URL.|
 | **Pages** | Representan las pantallas principales de la aplicación. Cada página combina componentes, lógica y llamadas a servicios. |
-| **Interactor** | Gestiona y valida mapeo del flujo hacia el caso de uso. |
-| **Domain** | Modelo que contiene reglas principales. |
-| **Use Case** | Gestiona la lógica transaccional. |
-| **Validator** | Aplica las reglas de negocio. |
-| **Entity** | Representación de persistencia del backend. |
+| **Assets** | Almacena recursos estáticos como imágenes, íconos, fuentes y estilos globales (CSS o SCSS).|
+| **Components** | Contiene componentes reutilizables de la interfaz de usuario (botones, formularios, modales, etc.). No gestionan lógica de negocio. |
+| **Services** | Encapsulan las llamadas HTTP al backend y gestionan la comunicación con las APIs. |
+| **Hooks** | Contienen lógica reutilizable (manejo de formularios, validaciones, autenticación, estados globales, etc.). |
+| **Utils** | Funciones y utilidades puras que apoyan la lógica del frontend (formateo, validaciones, manejo de fechas, etc.). |
+
 | **Repository** | Puerto de entrada a la base de datos. |
 
 ### **Interacción (Pasos de la Transacción)**
