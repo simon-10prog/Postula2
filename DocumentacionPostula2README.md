@@ -269,5 +269,8 @@ El diagrama muestra el flujo que sigue el Frontend para ejecutar una acción de 
 | ActualizarVista | components | pages | Los componentes informan a la página principal para renderizar el nuevo estado (por ejemplo, formulario reseteado o mensaje de éxito). |
 | Redirección | pages | router | El backend responde con el resultado (éxito, error o validación fallida).Si la transacción fue exitosa, el usuario es redirigido a otra ruta o se muestra una vista de confirmación. |
 
+### **El diagrama de paquetes del FrontEnd es el siguiente:**
+![Diagrama de secuencias de Postula2](SecuenciasFrontEndPostula2.png)
+
 ## Estructura de documentación
 
