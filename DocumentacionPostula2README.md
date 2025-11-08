@@ -234,7 +234,7 @@ Muestra visualmente la ejecución de una transacción en el backend, mostrando c
 ### **El diagrama de paquetes del FrontEnd es el siguiente:**
 ![Diagrama de secuencias de Postula2](SecuenciasBackEndPostula2.png)
 
-## **4.2 Diagrama de Secuencia – Backend (Transacción General)**
+## **4.3 Diagrama de Secuencia – FrontEnd (Transacción General)**
 
 ### **Descripción**
 El diagrama muestra el flujo que sigue el Frontend para ejecutar una acción de negocio (crear, consultar, actualizar o eliminar), garantizando:
@@ -249,8 +249,6 @@ El diagrama muestra el flujo que sigue el Frontend para ejecutar una acción de 
 | **Services** | Encapsulan las llamadas HTTP al backend y gestionan la comunicación con las APIs. |
 | **Hooks** | Contienen lógica reutilizable (manejo de formularios, validaciones, autenticación, estados globales, etc.). |
 | **Utils** | Funciones y utilidades puras que apoyan la lógica del frontend (formateo, validaciones, manejo de fechas, etc.). |
-
-| **Repository** | Puerto de entrada a la base de datos. |
 
 ### **Interacción (Pasos de la Transacción)**
 
