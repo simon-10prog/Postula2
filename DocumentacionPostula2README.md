@@ -231,7 +231,7 @@ Muestra visualmente la ejecución de una transacción en el backend, mostrando c
 | ValidaciondeTransaccion | Use Case | DTO | Se recibe la validacion de la transaccion |
 | RespuestadeTransaccion | DTO | Frontend | Se recibe la respuesta de la transaccion |
 
-### **El diagrama de paquetes del FrontEnd es el siguiente:**
+### **El diagrama de secuencia del backend es el siguiente:**
 ![Diagrama de secuencias de Postula2](SecuenciasBackEndPostula2.png)
 
 ## **4.3 Diagrama de Secuencia – FrontEnd (Transacción General)**
@@ -269,5 +269,5 @@ El diagrama muestra el flujo que sigue el Frontend para ejecutar una acción de 
 | ActualizarVista | components | pages | Los componentes informan a la página principal para renderizar el nuevo estado (por ejemplo, formulario reseteado o mensaje de éxito). |
 | Redirección | pages | router | El backend responde con el resultado (éxito, error o validación fallida).Si la transacción fue exitosa, el usuario es redirigido a otra ruta o se muestra una vista de confirmación. |
 
-### **El diagrama de paquetes del FrontEnd es el siguiente:**
+### **El diagrama de secuencia del FrontEnd es el siguiente:**
 ![Diagrama de secuencias de Postula2](SecuenciasFrontEndPostula2.png)
