@@ -116,7 +116,7 @@ Cada componente encapsula una responsabilidad específica, facilitando la manten
 # **3. Diagrama de Paquetes**
 
 ## **Descripción**
-El diagrama de paquetes describe como se divide y esta la estructura tanto del Backend como del Frontend en Postula2, siguiendo los principios de **Clean Architecture** y una arquitectura hexagonal la cual nos permite tener un codigo bien distribuido en diferentes modulos, los cuales facilitan la validacion de posibles errores, donde las dependencias fluyen desde capas externas hacia capas internas, protegiendo el dominio del negocio contra detalles tecnológicos.
+El diagrama de paquetes describe como se divide y esta la estructura tanto del Backend como del Frontend en Postula2, siguiendo los principios de **Clean Architecture** y una **arquitectura hexagonal** la cual nos permite tener un codigo bien distribuido en diferentes modulos, los cuales facilitan la validacion de posibles errores, donde las dependencias fluyen desde capas externas hacia capas internas, protegiendo el dominio del negocio contra detalles tecnológicos.
 
 ## **3.1 Paquetes — Backend**
 
