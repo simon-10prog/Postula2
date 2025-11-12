@@ -52,7 +52,7 @@ La solución está diseñada bajo un enfoque **cloud-agnostic**, escalables y de
 | Traceability and Monitoring Platform | Sí | AWS | Cloudwatch | Latest | HTTPS | Trazabilidad y deteccion de errores en tiempo real. | Genérico |
 | Database | No | PostgreSQL | PostgreSQL | 16+ | TCP/IP | Base de datos confiable y libre de licencias. | Genérico |
 | Key Vault | Sí | Cloudflare | Workers KV | Latest | HTTPS | Protección de datos con auditoría y control de acceso. | Genérico |
-| Notification Gateway | No | Google | Firebase cloud messaging| Latest | HTTPS | Comunicación confiable. | Soporte |
+| Notification Gateway | No | Twilio SendGrid | SendGrid| Latest | HTTPS | Comunicación confiable. | Soporte |
 | Container Management | No | Render | Render Cloud | Latest | HTTPS | Despliegue optimizado. | Genérico |
 
 ### **1.4 Bloques de Construcción Desarrollados**
@@ -64,12 +64,12 @@ La solución está diseñada bajo un enfoque **cloud-agnostic**, escalables y de
 | IDE Backend | Sí | Entorno de Desarrollo | JetBrains | IntelliJ IDEA | 2024.3.3 | IDE para desarrollo profesional Java. | Aumenta productividad y calidad de código. |
 | Asistente inteligente de Desarrollo | Sí | IA | Microsoft | GitHub Copilot | Latest | Desarrollo asistido. | Optimiza tiempos y detecta errores. |
 | Base de Datos Serverless | No | DB Cloud | AWS | Amazon Aurora Serverless | Latest | PostgreSQL serverless con escalado automático. | Optimiza costos y ajusta recursos |
-| Front End Postula2 | No | Framework | Google | React | 19 | Framework UI moderno basado en Javascrpit. | Soporta modularidad y escalabilidad UI. |
+| Front End Postula2 | No | Framework | Google | Angular | 19 | Framework UI moderno basado en Javascrpit. | Soporta modularidad y escalabilidad UI. |
 | IDE Frontend | No | IDE | Microsoft | Visual Studio Code | Latest | Editor robusto, extensible y estándar para web. | Ligero y versátil para desarrollo frontend. |
 | CI(Integracion continua)/CD(Continuo despliegue) | No | Calidad | SonarQube | SonarQube | Latest | Inspección continua de seguridad y estilo. | Garantiza calidad en todo el ciclo. |
 
 ### **1.5 El diagrama de despliegue de  es el siguiente:**
-![Diagrama de arquitectura de Postula2](ArquitecturadeDesplieguePostula2.png)
+![Diagrama de arquitectura de Postula2](ArquitecturadeDespliegue.png)
 
 # **2. Diagrama de Componentes**
 
@@ -91,7 +91,7 @@ Cada componente encapsula una responsabilidad específica, facilitando la manten
 | **Cloudflare Secure Access Service Edge(SASE)** | Obtención segura de credenciales. | Evita exposición de claves en código. | Zero trust | Integración / Servicio Externo |
 | **Spring Web / Spring WebFlux** | Exposición de APIs REST y comunicación reactiva. | Reduce latencia en integraciones externas concurrentes. | Spring | Framework / Acelerador |
 | **Springdoc-openapi+Swagger UI** | Documentación automática de API y consola interactiva. | Facilita integración con otros equipos y clientes. | Spring | Framework / Acelerador |
-| **Firebase SDKs** | Gestor centralizado de notificaciones. | Evita desplegar infraestructura de mensajería propia. | HTTP externo | Servicio Externo |
+| **SendGrid** | Gestor centralizado de notificaciones. | Evita desplegar infraestructura de mensajería propia. | HTTP externo | Servicio Externo |
 | **MapStruct** | Generación de mapeos de DTO a Domain. | Valida errores y mejora rendimiento. | Java 21 | Librería |
 | **Actuator** | Exposición de endpoints de monitoreo. | Mejora observabilidad y soporte. | Spring | Framework / Acelerador |
 | **CrossCutting** | Funciones reutilizables. | Permite la reutilización y evita duplicación de código. | Java 21 | Acelerador Interno |
